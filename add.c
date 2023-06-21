@@ -7,7 +7,7 @@
 void _add(stack_t **head, unsigned int number)
 {
 	unsigned int len = 0, nbr;
-	stack_t *add_node, *tmp, *t, *t1;
+	stack_t *tmp, *t;
 
 	tmp = *head;
 	while (tmp)
@@ -25,23 +25,8 @@ void _add(stack_t **head, unsigned int number)
 	}
 	t = *head;
 	nbr = t->n + t->next->n;
-	add_node = malloc(sizeof(stack_t));
-	add_node->n = nbr;
-	add_node->prev = NULL;
-	if (t->next->next != NULL)
-	{
-		t1 = t->next->next;
-		_pop(head, number);
-		_pop(head, number);
-		t1->prev = add_node;
-		add_node->next = t1;
-		(*head) = add_node;
-	}
-	else
-	{
-		_pop(head, number);
-		_pop(head, number);
-		add_node->next = NULL;
-		(*head) = add_node;
-	}
+	t->next->n = nbr;
+	(*head) = t->next;
+	t->next->prev = NULL;
+	free(t);
 }
