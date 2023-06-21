@@ -16,6 +16,7 @@ int execute(char *content, stack_t **head, unsigned int number, FILE *file)
 		{"queue", _queue},
 		{"pint", _pint},
 		{"pop", _pop},
+		{"swap", _swap},
 		{NULL, NULL}
 	};
 	unsigned int i = 0;
