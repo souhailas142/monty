@@ -1,4 +1,5 @@
 #include "monty.h"
+bus_t bus;
 #define _POSIX_C_SOURCE 200809L
 ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 /**
@@ -15,7 +16,10 @@ int main(int argc, char *argv[])
 	ssize_t read_line = 1;
 	stack_t *stack = NULL;
 	unsigned int number = 0;
-	bus_t bus = {NULL, NULL, NULL, 0};
+	bus.arg = NULL;
+	bus.file = NULL;
+	bus.content = NULL;
+	bus.lifi = 0;
 	(void)bus;
 
 	if (argc != 2)

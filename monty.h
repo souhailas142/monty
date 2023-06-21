@@ -46,13 +46,12 @@ typedef struct instruction_s
  */
 typedef struct bus_s
 {
-	char *arg;
-	FILE *file;
-	char *content;
-	int lifi;
+        char *arg;
+        FILE *file;
+        char *content;
+        int lifi;
 }  bus_t;
 extern bus_t bus;
-
 
 void _push(stack_t **head, unsigned int number);
 void free_stack(stack_t *head);
