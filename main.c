@@ -1,4 +1,6 @@
 #include "monty.h"
+#define _POSIX_C_SOURCE 200809L
+ssize_t getline(char **lineptr, size_t *n, FILE *stream);
 /**
  * main - monty code interpreter
  * @argc: number of arguments
@@ -9,11 +11,12 @@ int main(int argc, char *argv[])
 {
 	FILE *file;
 	char *content;
-	int size = 0;
+	size_t size = 0;
 	ssize_t read_line = 1;
 	stack_t *stack = NULL;
 	unsigned int number = 0;
 	bus_t bus = {NULL, NULL, NULL, 0};
+	(void)bus;
 
 	if (argc != 2)
 	{
