@@ -62,6 +62,6 @@ void _queue(stack_t **head, unsigned int number);
 void addQueue(stack_t **head, int n);
 void _pall(stack_t **head, unsigned int number);
 int execute(char *content, stack_t **head, unsigned int number, FILE *file);
-
+void _pint(stack_t **head, unsigned int number);
 
 #endif
