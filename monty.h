@@ -52,6 +52,7 @@ typedef struct bus_s
         int lifi;
 }  bus_t;
 extern bus_t bus;
+bus_t bus;
 
 void _push(stack_t **head, unsigned int number);
 void free_stack(stack_t *head);
