@@ -19,7 +19,8 @@ void _stack(stack_t **head, unsigned int number)
  */
 void addStack(stack_t **head, int n)
 {
-	stack_t *new_node, *tmp;
+	stack_t *new_node;
+	stack_t *tmp;
 
 	tmp = *head;
 	new_node = malloc(sizeof(stack_t));
