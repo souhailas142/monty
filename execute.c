@@ -21,6 +21,8 @@ int execute(char *content, stack_t **head, unsigned int number, FILE *file)
 		{"nop", _nop},
 		{"sub", _sub},
 		{"div", _div},
+		{"mul", _mul},
+		{"mod", _mod},
 		{NULL, NULL}
 	};
 	unsigned int i = 0;

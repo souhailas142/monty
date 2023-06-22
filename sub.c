@@ -25,8 +25,7 @@ void _sub(stack_t **head, unsigned int number)
 		exit(EXIT_FAILURE);
 	}
 	t = *head;
-	nbr = t->n - t->next->n;
-	nbr = nbr < 0 ? nbr * -1 : nbr;
+	nbr = t->next->n - t->n;
 	t->next->n = nbr;
 	(*head) = t->next;
 	t->next->prev = NULL;
