@@ -41,7 +41,7 @@ void _push(stack_t **head, unsigned int number)
 	}
 	nbr = atoi(bus.arg);
 	if (bus.lifi == 0)
-		addStack(head, nbr);
+		add_stack(head, nbr);
 	else
-		addQueue(head, nbr);
+		add_queue(head, nbr);
 }

@@ -1,23 +1,11 @@
 #include "monty.h"
 /**
- * _stack - print the top
- * @head: head of the stack
- * @number: line_number
- * Return: nothing
- */
-void _stack(stack_t **head, unsigned int number)
-{
-	(void)head;
-	(void)number;
-	bus.lifi = 0;
-}
-/**
- * addStack - add node to the stack
+ * add_stack - add node to the stack
  * @head: head od the stack
  * @n: number
  * Return: nothing
  */
-void addStack(stack_t **head, int n)
+void add_stack(stack_t **head, int n)
 {
 	stack_t *new_node;
 	stack_t *tmp;
