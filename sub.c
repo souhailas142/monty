@@ -7,7 +7,8 @@
  */
 void _sub(stack_t **head, unsigned int number)
 {
-	int len = 0, nbr;
+	int len = 0;
+	int nbr;
 	stack_t *tmp, *t;
 
 	tmp = *head;
