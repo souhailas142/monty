@@ -19,7 +19,8 @@ void _queue(stack_t **head, unsigned int number)
  */
 void addQueue(stack_t **head, int n)
 {
-	stack_t *end_node, *tmp;
+	stack_t	*end_node;
+	stack_t	*tmp;
 
 	tmp = *head;
 	end_node = malloc(sizeof(stack_t));
