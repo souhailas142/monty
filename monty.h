@@ -19,9 +19,9 @@
  */
 typedef struct stack_s
 {
-        int n;
-        struct stack_s *prev;
-        struct stack_s *next;
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
 } stack_t;
 /**
  * struct instruction_s - opcode and its function
@@ -33,8 +33,8 @@ typedef struct stack_s
  */
 typedef struct instruction_s
 {
-        char *opcode;
-        void (*f)(stack_t **stack, unsigned int line_number);
+	char *opcode;
+	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 /**
  * struct bus_s - variables -args, file, line content
@@ -46,31 +46,31 @@ typedef struct instruction_s
  */
 typedef struct bus_s
 {
-        char *arg;
-        FILE *file;
-        char *content;
-        int lifi;
-}  bus_t;
+	char	*arg;
+	FILE	*file;
+	char	*content;
+	int		lifi;
+} 			bus_t;
 extern bus_t bus;
 bus_t bus;
 
-void _push(stack_t **head, unsigned int number);
-void free_stack(stack_t *head);
-void _stack(stack_t **head, unsigned int number);
-void addStack(stack_t **head, int n);
-void _queue(stack_t **head, unsigned int number);
-void addQueue(stack_t **head, int n);
-void _pall(stack_t **head, unsigned int number);
-int execute(char *content, stack_t **head, unsigned int number, FILE *file);
-void _pint(stack_t **head, unsigned int number);
-void _pop(stack_t **head, unsigned int number);
-void _swap(stack_t **head, unsigned int number);
-void _add(stack_t **head, unsigned int number);
-void _nop(stack_t **head, unsigned int number);
-void _sub(stack_t **head, unsigned int number);
-void _div(stack_t **head, unsigned int number);
-void _mul(stack_t **head, unsigned int number);
-void _mod(stack_t **head, unsigned int number);
+void	_push(stack_t **head, unsigned int number);
+void	free_stack(stack_t *head);
+void	_stack(stack_t **head, unsigned int number);
+void	addStack(stack_t **head, int n);
+void	_queue(stack_t **head, unsigned int number);
+void	addQueue(stack_t **head, int n);
+void	_pall(stack_t **head, unsigned int number);
+int		execute(char *content, stack_t **head, unsigned int number, FILE *file);
+void	_pint(stack_t **head, unsigned int number);
+void	_pop(stack_t **head, unsigned int number);
+void	_swap(stack_t **head, unsigned int number);
+void	_add(stack_t **head, unsigned int number);
+void	_nop(stack_t **head, unsigned int number);
+void	_sub(stack_t **head, unsigned int number);
+void	_div(stack_t **head, unsigned int number);
+void	_mul(stack_t **head, unsigned int number);
+void	_mod(stack_t **head, unsigned int number);
 
 
 #endif
