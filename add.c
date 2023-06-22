@@ -6,7 +6,8 @@
  */
 void _add(stack_t **head, unsigned int number)
 {
-	unsigned int len = 0, nbr;
+	unsigned int len = 0;
+	unsigned int nbr;
 	stack_t *tmp, *t;
 
 	tmp = *head;
