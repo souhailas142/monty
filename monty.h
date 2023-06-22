@@ -71,6 +71,9 @@ void	_sub(stack_t **head, unsigned int number);
 void	_div(stack_t **head, unsigned int number);
 void	_mul(stack_t **head, unsigned int number);
 void	_mod(stack_t **head, unsigned int number);
-
+void	_pchar(stack_t **head, unsigned int number);
+void 	_pstr(stack_t **head, unsigned int number);
+void	_rotl(stack_t **head, unsigned int number);
+void	_rotr(stack_t **head, unsigned int number);
 
 #endif

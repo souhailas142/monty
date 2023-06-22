@@ -10,19 +10,13 @@
 int execute(char *content, stack_t **head, unsigned int number, FILE *file)
 {
 	instruction_t options[] = {
-		{"push", _push},
-		{"pall", _pall},
-		{"stack", _stack},
-		{"queue", _queue},
-		{"pint", _pint},
-		{"pop", _pop},
-		{"swap", _swap},
-		{"add", _add},
-		{"nop", _nop},
-		{"sub", _sub},
-		{"div", _div},
-		{"mul", _mul},
+		{"push", _push}, {"pall", _pall}, {"stack", _stack}, {"queue", _queue},
+		{"pint", _pint}, {"pop", _pop}, {"swap", _swap}, {"add", _add},
+		{"nop", _nop}, {"sub", _sub}, {"div", _div}, {"mul", _mul},
 		{"mod", _mod},
+		{"pchar", _pchar},
+		{"pstr", _pstr},
+		{"rotl", _rotl}, {"rotr", _rotr},
 		{NULL, NULL}
 	};
 	unsigned int i = 0;
